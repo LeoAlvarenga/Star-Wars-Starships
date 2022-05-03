@@ -8,6 +8,8 @@ export const parseConsumablesToHours = (
 
   const [time, unit] = starshipConsumables.split(" ");
 
+  if (!time || !unit) return null;
+
   if (unit.includes("day")) {
     return Number(time) * HOURS_IN_A_DAY;
   }
@@ -32,7 +34,6 @@ export const stopsPerMGLTDistance = (
   mglt: number | null,
   consumablesTime: number | null
 ) => {
-  console.table({ distance, mglt, consumablesTime });
   if (distance === null || mglt === null || consumablesTime === null)
     return null;
 
