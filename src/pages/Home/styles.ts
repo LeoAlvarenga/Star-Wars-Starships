@@ -27,6 +27,7 @@ export const Header = styled.div`
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 24px;
+    color: yellow;
   }
 
   .buttonsContainer {
