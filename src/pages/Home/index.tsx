@@ -23,7 +23,6 @@ export const Home = () => {
     const path = pageLink.substring(api.defaults.baseURL?.length!);
     setloading(true);
     api.get(path).then((res) => {
-      console.log(res);
       setResponse(res.data);
       setloading(false);
     });
